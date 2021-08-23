@@ -1,0 +1,39 @@
+<div class="card m-2 p-3">
+    <div class="alert alert-primary text-center header">~Add Quote!~</div>
+    <form (ngSubmit)='submitQuote()' #quoteform='ngForm'>
+        <div class="modal-header">
+            <button type="reset" class="btn btn-outline-danger float-right "
+                style="float: right; border-radius: 20px;">Reset</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label class="control-label">Title</label>
+                <input type="text" [(ngModel)]="newQuote.title" #title='ngModel' name="title" id="" class="form-control"
+                    required>
+                <div [hidden]="title.valid || title.pristine" class="alert alert-danger p-0 text-center">
+                    <p>Title is required</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Author</label>
+                <input type="text" [(ngModel)]="newQuote.author" #author='ngModel' name="author" id=""
+                    class="form-control" required>
+                <div class="alert alert-danger" [hidden]="author.valid || author.pristine">
+                    <p>Author is required</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Description</label>
+                <textarea class="form-control" [(ngModel)]="newQuote.description" name="description"
+                    #description='ngModel' id="" rows="4" required></textarea>
+                <div class="alert alert-danger" [hidden]="description.valid || description.pristine">
+                    Description is required
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-success">Add Quote</button>
+        </div>
+    </form>
+</div>
+
