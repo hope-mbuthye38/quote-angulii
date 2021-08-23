@@ -10,10 +10,10 @@ import { Qoute} from '../qoute.ts';
 export class QuoteComponent implements OnInit {
 
     quotes: Qoute[] = [
-      new Qoute(1, 'this is a quote', 'Hope', 3, 4, 'This is the Description' , new Date()),
-      new Qoute(1, 'this is a quote', 'Hope', 3, 4, 'This is the Description' , new Date()),
-      new Qoute(1, 'this is a quote', 'Hope', 3, 4, 'This is the Description' , new Date()),
-      new Qoute(1, 'this is a quote', 'Hope', 3, 4, 'This is the Description' , new Date())
+      new Qoute(1, 'this is a quote', 'Hope', 0, 0, 'This is the Description' , new Date()),
+      new Qoute(1, 'this is a quote', 'Hope', 0, 0, 'This is the Description' , new Date()),
+      new Qoute(1, 'this is a quote', 'Hope', 0, 0, 'This is the Description' , new Date()),
+      new Qoute(1, 'this is a quote', 'Hope', 0, 0, 'This is the Description' , new Date())
     ]
   // quote: any;
     
@@ -33,9 +33,15 @@ export class QuoteComponent implements OnInit {
     }
     addUpvote(isUpvote: any, index: any){
       if(isUpvote){
-        let toUpvote = confirm ('like this vote?');
+        let toUpvote = confirm (' like this vote?');
         if(toUpvote){
           this.quotes[index].upvote +=1;
+        }
+      }
+      else{
+        let toDownvote = confirm ('Are you sure you want to dislike this vote?');
+        if(toDownvote){
+          this.quotes[index].downvote +=1;
         }
       }
     }

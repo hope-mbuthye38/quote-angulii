@@ -1,22 +1,17 @@
 <div class="card m-2 p-3">
-
-
-
-
-
-
-
-    <div class="alert alert-primary text-center header">~Add Quote!~</div>
+    <div class="alert alert-primary text-center header">~Post Quote~</div>
     <form (ngSubmit)='submitQuote()' #quoteform='ngForm'>
         <div class="modal-header">
-            <button type="reset" class="btn btn-outline-danger float-right "
-                style="float: right; border-radius: 20px;">Reset</button>
+            <button type="reset" class="btn btn-outline-danger  "
+                style=" border-radius: 10px;">Reset</button>
+
         </div>
 
 
 
 
 
+        
         <div class="modal-body">
             <div class="form-group">
                 <label class="control-label">Title</label>
@@ -47,7 +42,7 @@
 
 
             <div class="form-group">
-                <label class="control-label">Description</label>
+                <label class="control-label">Quote~</label>
                 <textarea class="form-control" [(ngModel)]="newQuote.description" name="description"
                     #description='ngModel' id="" rows="4" required></textarea>
                 <div class="alert alert-danger" [hidden]="description.valid || description.pristine">
