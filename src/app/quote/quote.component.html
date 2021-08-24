@@ -1,4 +1,4 @@
-<h1 class="text-center">~ Quote OnClick ~</h1>
+<h1 class="text-center" style="color: gray; font-family: 'Courier New', Courier, monospace;">~ Quote OnClick ~</h1>
 <div class="row">
 <div class="col-md-4">
     <div class="container">
@@ -15,6 +15,14 @@
                 <button (click)='toggleDetails(i)' class="btn btn-outline-primary" >Show details</button>
                 <app-quote-details *ngIf='quote.showDescription' [quote]='quote' 
                 (isDelete)='deleteQuote($event,i)' (isUpvote)='addUpvote($event,i)'></app-quote-details>
+                
+                
+                
+                
+                
+                 
+                
+                
                 <div class="float-right">{{quote.author}}</div>
             </div>
 
