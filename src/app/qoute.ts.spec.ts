@@ -1,7 +1,6 @@
-import { Qoute.Ts } from './qoute.ts';
-
-describe('Qoute.Ts', () => {
+import { Qoute.ts  } from './qoute.ts';
+describe('Qoute.ts', () => {
   it('should create an instance', () => {
-    expect(new Qoute.Ts()).toBeTruthy();
+    expect(new Qoute.ts()).toBeTruthy();
   });
 });
